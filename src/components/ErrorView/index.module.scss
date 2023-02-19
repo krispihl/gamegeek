@@ -1,0 +1,12 @@
+.errorView {
+    margin: 300px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-size: var(--font-xl);
+
+    p:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,112 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    margin: 20px;
+    padding: 30px;
+    width: 400px;
+    min-height: max-content;
+    color: var(--deep-blue);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    border: 1px solid rgba(20, 33, 61, 0.5);
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-5px);
+        box-shadow: 3px 5px 5px rgba(20, 33, 61, 0.1);
+
+        .button {
+            color: rgba(20, 33, 61, 0.8);
+        }
+    }
+
+    @media only screen and (max-width: 870px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 30px 0 0 0;
+
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    } 
+}
+
+.gamedata {
+    margin-right: 10px;
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .button {
+        margin-top: 10px;
+        padding: 4px;
+        border: none;
+        border-radius: 5px;
+        color: var(--deep-blue);
+        font-size: var(--font-m);
+        background-color: rgba(20, 33, 61, 0.05);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 870px) {
+            width: 200px;
+            background-color: var(--off-white);
+            margin-bottom: 10px;
+        } 
+    }
+
+    @media only screen and (max-width: 870px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 30px;
+        margin-right: 0;
+        background-color: var(--light-cyan);
+        width: -webkit-fill-available;
+        border-radius: 0 0 8px 8px;
+    } 
+}
+
+.image {
+    height: 150px;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+
+    @media only screen and (max-width: 870px) {
+        height: 150px;
+        max-width: 250px;
+        margin-bottom: 30px;
+    } 
+}
+
+.icon {
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.name {
+    margin-bottom: 10px;
+
+    @media only screen and (max-width: 870px) {
+        text-align: center;
+    }
+}
+
+.pills {
+    display: flex;
+    margin: 10px 0 0 0;
+
+    @media only screen and (max-width: 870px) {
+        margin-bottom: 10px;
+    } 
+}

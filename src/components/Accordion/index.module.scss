@@ -1,0 +1,30 @@
+.accordion {
+    grid-area: accordion;
+    background-color: var(--deep-blue);
+    padding: 25px 40px;
+    color: var(--cyan);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.toggle {
+    display: flex;
+}
+
+.icon {
+    height: 24px;
+    margin-left: 20px;
+    transition: 0.3s ease-in-out;
+
+    &--open {
+        transform: rotate(180deg);
+    }
+}
+
+.content-wrapper {
+    transition: height ease 0.2s;
+}
+
+.content {
+    margin-top: 20px;
+}

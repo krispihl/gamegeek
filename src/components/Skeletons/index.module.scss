@@ -1,0 +1,109 @@
+.skeleton {
+    background: rgba(80,47,76,0.08);
+    margin: 8px 0;
+    border-radius: 4px;
+
+    @media only screen and (max-width: 870px) {
+        margin: 4px 0;
+    }
+}
+
+.text {
+    width: 150px;
+    height: 20px;
+}
+
+.title {
+    width: 150px;
+    height: 32px;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: 870px) {
+        margin-bottom: 5px;
+    } 
+}
+
+.button {
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 870px) {
+        width: 200px;
+        background-color: var(--off-white);
+    } 
+}
+
+.thumbnail {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+
+    @media only screen and (max-width: 870px) {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 30px;
+    } 
+}
+
+.skeletonGameList {
+    grid-area: gamelist;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.skeletonGame {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(80,47,76,0.03);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 30px;
+    width: 400px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 870px) {
+        flex-direction: column-reverse;
+        padding-bottom: 20px;
+    } 
+}
+
+.skeletonGamedata {
+    margin-right: 20px;
+
+    @media only screen and (max-width: 870px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+}
+
+.shimmerWrapper {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    animation: loading 0.5s infinite;
+}
+
+.shimmer {
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-20deg);
+    box-shadow: 0 0 30px 30px rgba(255,255,255,0.05);
+}
+
+@keyframes loading {
+    0% { transform: translateX(-150%) }
+    50% { transform: translateX(-60%) }
+    100% { transform: translateX(150%) }
+}

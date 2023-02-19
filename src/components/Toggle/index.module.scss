@@ -1,0 +1,86 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+}
+
+.input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+
+    &:checked {
+        ~ .dice, ~ .dot {
+            transform: translateX(26px);
+        }
+    }
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 54px;
+    height: 28px;
+    cursor: pointer;
+    background-color: var(--off-white);
+    border-radius: 6px;
+
+    &--on {
+        background: linear-gradient(
+            to right, var(--off-white), var(--orange), var(--orange)
+        );
+    }
+}
+
+.dice {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    border-radius: 4px;
+    padding: 2px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "one . two"
+        "three four five"
+        "six . seven";
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color:white;
+    justify-self: center;
+    align-self: center;
+}
+
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}

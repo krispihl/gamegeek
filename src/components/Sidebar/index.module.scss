@@ -1,0 +1,13 @@
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--deep-blue);
+    padding: 40px;
+    color: var(--cyan);
+    font-weight: normal;
+}
+
+.filterTitle {
+    color: var(--orange);
+    font-size: var(--font-l);
+    margin-bottom: 20px;
+}

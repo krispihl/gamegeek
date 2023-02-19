@@ -1,0 +1,20 @@
+.pageWrapper {
+    background-color: var(--off-white);
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 150px 1fr 100px;
+    grid-template-areas: 
+        "logo header"
+        "sidebar gamelist"
+        "footer .";
+
+    @media only screen and (max-width: 870px) {
+        grid-template-columns: 56px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "logo header"
+            "accordion accordion"
+            "gamelist gamelist"
+            "footer footer";
+    }       
+}
