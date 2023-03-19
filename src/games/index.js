@@ -350,4 +350,8 @@ export const gameList = [
         id: 171665,
         juniorGame: true,
     },
+    {
+        name: 'Trekking through history',
+        id: 353288,
+    },
 ]

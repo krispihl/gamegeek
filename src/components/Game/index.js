@@ -20,7 +20,7 @@ const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale
                     <p>Play time: {time} min</p>
                     {(locale || isExpansion || juniorGame) && (
                         <div className={styles.pills}>
-                            {locale && <Pill title='Estonian' />}
+                            {locale === 'EST' && <Pill title='Estonian' />}
                             {isExpansion && <Pill title='Expansion' />}
                             {juniorGame && <Pill title='Junior' />}
                         </div>
