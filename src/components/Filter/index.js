@@ -30,8 +30,8 @@ const FILTER_MAP = {
     },
 }
 
-const Filter = ({ name, dice, toggleState, filterName }) => {
-    const [isToggled, setIsToggled] = useState(toggleState);
+const Filter = ({ name, dice, filterName }) => {
+    const [isToggled, setIsToggled] = useState(false);
     const { setFilter, removeFilter } = useGames();
 
     const handleToggle = () => {
