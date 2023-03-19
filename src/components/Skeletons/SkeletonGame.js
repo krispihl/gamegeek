@@ -1,6 +1,6 @@
-import styles from './index.module.scss';
 import Shimmer from './Shimmer';
 import SkeletonElement from './SkeletonElement';
+import styles from './index.module.scss';
 
 const SkeletonGame = () => {
     return (

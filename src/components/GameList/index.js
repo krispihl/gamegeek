@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import bggXmlApiClient from 'bgg-xml-api-client';
-import { gameList } from '../../games'
-import Game from '../../components/Game';
-import ErrorView from '../../components/ErrorView';
-import styles from './index.module.scss';
+import Game from '../Game';
+import ErrorView from '../ErrorView';
 import SkeletonGameList from '../Skeletons/SkeletonGameList';
+import { gameList } from '../../games'
 import { useGames } from '../../contexts/games';
+import styles from './index.module.scss';
 
 const getName = (game) => {
     const BBGName = Array.isArray(game.name) ? game.name[0].value : game.name.value;
@@ -57,25 +58,27 @@ const GameList = () => {
         loading ? <SkeletonGameList /> :
         errorView ? <ErrorView /> :
         (<div className={styles.wrapper}>
-            <div className={styles.gameList}>
-                {filteredGames.map((game) => {
-                    return (
-                        <Game
-                            key={game.id}
-                            name={getName(game)}
-                            description={game.description}
-                            imageUrl={game.thumbnail}
-                            minplayers={game.minplayers.value}
-                            maxplayers={game.maxplayers.value}
-                            mintime={game.minplaytime.value}
-                            maxtime={game.maxplaytime.value}
-                            locale={game.locale}
-                            isExpansion={game.type === 'boardgameexpansion'}
-                            juniorGame={game.juniorGame}
-                        />
-                    )
-                })}
-            </div>
+            <motion.div layout className={styles.gameList}>
+                <AnimatePresence>
+                    {filteredGames.map((game) => {
+                        return (
+                            <Game
+                                key={game.id}
+                                name={getName(game)}
+                                description={game.description}
+                                imageUrl={game.thumbnail}
+                                minplayers={game.minplayers.value}
+                                maxplayers={game.maxplayers.value}
+                                mintime={game.minplaytime.value}
+                                maxtime={game.maxplaytime.value}
+                                locale={game.locale}
+                                isExpansion={game.type === 'boardgameexpansion'}
+                                juniorGame={game.juniorGame}
+                            />
+                        )
+                    })}
+                </AnimatePresence>
+            </motion.div>
         </div>)
     )
 }

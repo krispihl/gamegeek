@@ -1,5 +1,5 @@
-import styles from './index.module.scss';
 import cx from 'classnames';
+import styles from './index.module.scss';
 
 const Pill = ({ title }) => {
     return (

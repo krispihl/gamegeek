@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Toggle from '../Toggle';
-import styles from './index.module.scss';
 import { useGames } from '../../contexts/games';
+import styles from './index.module.scss';
 
 const FILTER_MAP = {
     juniorGame: {

@@ -1,7 +1,8 @@
-import { useState, Fragment } from 'react';
-import styles from './index.module.scss';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Modal from '../Modal';
 import Pill from '../Pill';
+import styles from './index.module.scss';
 
 const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale, isExpansion, description, juniorGame }) => {
     const [modalShown, toggleModal] = useState(false);
@@ -10,7 +11,12 @@ const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale
     const time = mintime === maxtime ? `${mintime}` : `${mintime} - ${maxtime}`;
 
     return (
-        <Fragment>
+        <motion.div
+            layout
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 1 }}
+        >
             <div className={styles.wrapper} onClick={() => { toggleModal(true) }}>
                 <div className={styles.gamedata}>
                     <div className={styles.name}>
@@ -34,7 +40,7 @@ const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale
                 shown={modalShown}
                 close={() => { toggleModal(false) }}
             />
-        </Fragment>
+        </motion.div>
     )
 }
 

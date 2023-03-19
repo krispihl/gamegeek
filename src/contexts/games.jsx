@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useEffect, useContext, useState } from 'react';
 
 export const GamesContext = createContext({
     allGames: [],
