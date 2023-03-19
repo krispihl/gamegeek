@@ -4,10 +4,10 @@ import { createContext, useContext, useState } from 'react';
 export const GamesContext = createContext({
     allGames: [],
     setAllGames: () => null,
-    setFilter: () => null,
-    removeFilter: () => null,
     filteredGames: [],
     setFilteredGames: () => null,
+    setFilter: () => null,
+    removeFilter: () => null,
 });
 
 export const GamesProvider = ({ children }) => {
@@ -15,27 +15,25 @@ export const GamesProvider = ({ children }) => {
     const [filteredGames, setFilteredGames] = useState([]);
     const [filters, setFilters] = useState([]);
 
+    useEffect(() => {
+        setAllGames(allGames);
+        setFilteredGames(allGames);
+    }, [allGames]);
+
     const setFilter = (name, conditions) => {
         setFilters([ ...filters, { name, conditions } ]);
     };
 
     const removeFilter = (name) => {
-        const updatedFilters = filters.filter(filter => {
-            return filter.name !== name;
-        })
+        const updatedFilters = filters.filter(filter => filter.name !== name);
+
         setFilters(updatedFilters);
         setFilteredGames(allGames);
     };
 
     useEffect(() => {
-        setAllGames(allGames);
-        setFilteredGames(allGames);
-    }, [allGames])
-
-    useEffect(() => {
         if (!filters.length) {
             setFilteredGames(allGames);
-            return;
         }
     }, [filters, allGames])
 
@@ -60,7 +58,7 @@ export const GamesProvider = ({ children }) => {
     }, [filters]);
 
     return (
-        <GamesContext.Provider value={{ allGames, setAllGames, setFilter, removeFilter, filteredGames, setFilteredGames }}>
+        <GamesContext.Provider value={{ allGames, setAllGames, filteredGames, setFilteredGames, setFilter, removeFilter }}>
             {children}
         </GamesContext.Provider>
     );
