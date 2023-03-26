@@ -1,9 +1,9 @@
 .wrapper {
+    grid-area: gamelist;
     min-height: calc(100vh - 250px);
 }
 
 .gameList {
-    grid-area: gamelist;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

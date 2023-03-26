@@ -52,7 +52,7 @@ const GameList = () => {
         } catch(e) {
             setErrorView(true);
         }
-    }, [])
+    }, [setAllGames]);
 
     return (
         loading ? <SkeletonGameList /> :

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useContext, useState } from 'react';
+import { createContext, useEffect, useContext, useState, useCallback } from 'react';
 
 export const GamesContext = createContext({
     allGames: [],
@@ -36,11 +36,12 @@ export const GamesProvider = ({ children }) => {
         }
     }, [filters, allGames])
 
-    useEffect(() => {
+    const getFilteredGames = useCallback(() => {
+        let filteredResult = allGames;
         for (const filter of filters) {
             const { property, value } = filter.conditions;
 
-            const selection = filteredGames.filter(game => {
+            const selection = filteredResult.filter(game => {
                 if (filter.name === 'onePlayer') {
                     return game[property[0]].value === value[0];
                 } else if (filter.name === 'only2Players') {
@@ -52,9 +53,17 @@ export const GamesProvider = ({ children }) => {
                 return game[property[0]] === value[0];
             })
 
-            setFilteredGames(selection);
+            filteredResult = [...selection];
         }
-    }, [filters]);
+
+        return filteredResult;
+    }, [allGames, filters]);
+
+    useEffect(() => {
+        const filteredResult = getFilteredGames();
+
+        setFilteredGames(filteredResult);
+    }, [filters, getFilteredGames]);
 
     return (
         <GamesContext.Provider value={{ allGames, setAllGames, filteredGames, setFilteredGames, setFilter, removeFilter }}>
