@@ -9,7 +9,6 @@ const SkeletonGame = () => {
                 <SkeletonElement type='title' />
                 <SkeletonElement type='text' />
                 <SkeletonElement type='text' />
-                <SkeletonElement type='button' />
             </div>
             <SkeletonElement type='thumbnail' />
             <Shimmer />

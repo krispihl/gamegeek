@@ -17,22 +17,7 @@
     width: 150px;
     height: 32px;
     margin-bottom: 15px;
-
-    @media only screen and (max-width: 870px) {
-        margin-bottom: 5px;
-    } 
-}
-
-.button {
-    width: 130px;
-    height: 25px;
-    border-radius: 5px;
-    margin-top: 20px;
-
-    @media only screen and (max-width: 870px) {
-        width: 200px;
-        background-color: var(--off-white);
-    } 
+    margin-top: 10px;
 }
 
 .thumbnail {
@@ -60,7 +45,6 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #f4f4f8;
     border-radius: 8px;
     margin: 20px;
@@ -70,7 +54,9 @@
 
     @media only screen and (max-width: 870px) {
         flex-direction: column-reverse;
+        align-items: center;
         padding-bottom: 20px;
+        width: calc(100vw - 120px);
     } 
 }
 

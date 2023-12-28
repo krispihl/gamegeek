@@ -27,7 +27,7 @@ const Sidebar = () => {
                 </Accordion>
             ) : (
                 <div className={styles.sidebar}>
-                    <p className={styles.filterTitle}>FILTER GAMES:</p>
+                    <p className={styles.filterTitle}>Filter games:</p>
                     {getFilters()}
                 </div>
             )

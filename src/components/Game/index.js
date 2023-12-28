@@ -31,9 +31,13 @@ const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale
                             {juniorGame && <Pill title='Junior' />}
                         </div>
                     )}
-                    <button className={styles.button}>See description</button>
                 </div>
                 <img className={styles.image} src={imageUrl} alt={name} />
+                <div className={styles.infoCorner}>
+                <div className={styles.infoArrow}>
+                    →
+                </div>
+    </div>
             </div>
             <Modal
                 description={description}

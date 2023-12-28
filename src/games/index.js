@@ -354,4 +354,49 @@ export const gameList = [
         name: 'Trekking through history',
         id: 353288,
     },
+    {
+        name: 'Bohnanza',
+        id: 11,
+    },
+    {
+        name: 'The Crew',
+        id: 284083,
+    },
+    {
+        name: 'Minecraft: Heroes of the Village',
+        id: 365307,
+    },
+    {
+        name: 'Flamecraft',
+        id: 336986,
+        locale: 'EST',
+    },
+    {
+        name: 'Century: Golem Edition',
+        id: 232832,
+    },
+    {
+        name: 'Century: Golem Edition. Eastern mountains.',
+        id: 283619,
+    },
+    {
+        name: 'The Mind',
+        id: 244992,
+    },
+    {
+        name: 'Nidavellir',
+        id: 293014,
+    },
+    {
+        name: 'Arboretum',
+        id: 140934,
+    },
+    {
+        name: 'Lost Cities',
+        id: 50,
+    },
+    {
+        name: 'Cascadia',
+        id: 295947,
+    },
 ]

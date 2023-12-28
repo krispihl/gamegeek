@@ -6,19 +6,21 @@
     padding-left: 40px;
     background-color: var(--cyan);
     color: var(--deep-blue);
-    font-size: var(--font-heading);
+    font-size: 50px;
     font-family: 'Pacifico', cursive;
 
     @media only screen and (max-width: 870px) {
-        padding-left: 20px;
-        font-size: var(--font-xl);
+        padding: 20px 40px;
+        justify-content: center;
+        font-size: 1.5rem;
     }
 
     p {
         background: linear-gradient(
-            20deg, #025d5e, #c27e0e, #c27e0e
+            15deg, #025d5e, #F072F3, #9200A9
         );
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        padding-right: 12px;
     }
 }

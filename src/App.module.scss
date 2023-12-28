@@ -1,5 +1,4 @@
 .pageWrapper {
-    background-color: var(--off-white);
     display: grid;
     grid-template-columns: 350px 1fr;
     grid-template-rows: 150px 1fr 100px;
@@ -7,14 +6,17 @@
         "logo header"
         "sidebar gamelist"
         "footer .";
+    background: radial-gradient(80.99% 100% at 50% 0%, #00FF0A 0%, #36008E 100%), radial-gradient(50% 123.47% at 50% 50%, #EFE7C8 0%, #36008E 100%), linear-gradient(301.28deg, #FF006B 0%, #48DD9E 100%), linear-gradient(294.84deg, #5A60E4 0%, #D30000 100%), linear-gradient(52.29deg, #000000 0%, #00FF85 100%), radial-gradient(100% 138.69% at 100% 0%, #0007A5 0%, #FF7A00 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+    background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
 
     @media only screen and (max-width: 870px) {
-        grid-template-columns: 56px 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas: 
-            "logo header"
-            "accordion accordion"
-            "gamelist gamelist"
-            "footer footer";
-    }       
+            "header"
+            "accordion"
+            "gamelist"
+            "footer";
+        background: rgba(0, 206, 203, .2);
+    }
 }

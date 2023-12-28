@@ -1,29 +1,14 @@
 .wrapper {
     width: max-content;
     padding: 1px;
-    border-radius: 20px;
+    border-radius: 8px;
     margin-right: 10px;
-
-    &--Estonian {
-        background: linear-gradient(45deg, #01baef, #0d21a1);
-    }
-
-    &--Expansion {
-        background: linear-gradient(45deg, #96c5f7, #48e5c2);
-    }
-
-    &--Junior {
-        background: linear-gradient(45deg, #ff82a9, #9067c6);
-    }
+    opacity: 0.7;
   }
   
 .pill {
-    background: var(--off-white);
     padding: 2px 6px;
-    border-radius: 20px;
-    font-size: var(--font-s);
-
-    @media only screen and (max-width: 870px) {
-        background-color: var(--light-cyan);
-    }
+    border-radius: 8px;
+    font-size: 14px;
+    border: 2px solid var(--pink);
 }
