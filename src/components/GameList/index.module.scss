@@ -1,6 +1,16 @@
 .wrapper {
     grid-area: gamelist;
     min-height: calc(100vh - 250px);
+    border: 2px solid;
+    border-image-slice: 1;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-image-source: linear-gradient(to bottom, var(--primary-light), var(--primary-dark));
+
+    @media only screen and (max-width: 870px) {
+        border: none;
+    } 
 }
 
 .gameList {
@@ -9,4 +19,14 @@
     flex-wrap: wrap;
     align-items: center;
     padding-top: 20px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-image-source: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+
+    @media only screen and (max-width: 870px) {
+        border: none;
+    } 
 }

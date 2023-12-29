@@ -4,20 +4,29 @@
     justify-content: left;
     align-items: center;
     padding-left: 40px;
-    background-color: var(--cyan);
-    color: var(--deep-blue);
+    background-color: var(--primary-dark);
     font-size: 50px;
     font-family: 'Pacifico', cursive;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-image-source: linear-gradient(to top, var(--primary-light), var(--primary-dark));
 
     @media only screen and (max-width: 870px) {
+        background-color: var(--secondary-dark);
         padding: 20px 40px;
-        justify-content: center;
-        font-size: 1.5rem;
+        font-size: 24px;
+        font-family: inherit;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
     }
 
     p {
         background: linear-gradient(
-            15deg, #025d5e, #F072F3, #9200A9
+            15deg, var(--seconday-light), var(--seconday-bright), var(--seconday-light)
         );
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;

@@ -24,12 +24,18 @@
     width: 54px;
     height: 28px;
     cursor: pointer;
-    background-color: var(--off-white);
+    background: var(--primary-light);
     border-radius: 6px;
+
+    &:hover {
+        background: linear-gradient(
+            to right, var(--primary-light), var(--seconday-light)
+        );
+    }
 
     &--on {
         background: linear-gradient(
-            to right, var(--off-white), var(--pink), var(--pink)
+            to right, var(--primary-light), var(--seconday-light)
         );
     }
 }

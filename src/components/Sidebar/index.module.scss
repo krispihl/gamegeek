@@ -1,14 +1,32 @@
 .sidebar {
     grid-area: sidebar;
-    background-color: var(--deep-blue);
+    background-color: var(--secondary-mid);
     padding: 40px;
-    color: var(--cyan);
+    color: var(--primary-light);
     font-weight: normal;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-image-source: linear-gradient(to left, var(--primary-light), var(--secondary-mid));
+
+    p {
+        background: linear-gradient(
+            35deg, var(--seconday-light), var(--seconday-bright), var(--seconday-light)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    @media only screen and (max-width: 870px) {
+        border: none;
+    } 
 }
 
 .filterTitle {
-    color: var(--pink);
-    font-size: 36px;
+    color: var(--seconday-light);
+    font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Pacifico', cursive;
 }

@@ -22,9 +22,7 @@ const Sidebar = () => {
 
     return (
             isTabletOrMobile ? (
-                <Accordion triggerTitle='FILTER GAMES'>
-                    {getFilters()}
-                </Accordion>
+                <Accordion>{getFilters()}</Accordion>
             ) : (
                 <div className={styles.sidebar}>
                     <p className={styles.filterTitle}>Filter games:</p>
