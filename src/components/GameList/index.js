@@ -28,8 +28,9 @@ const GameList = () => {
                     const locale = game.locale ? game.locale : 'EN';
                     const localName = game.localName ? game.localName : '';
                     const juniorGame = game.juniorGame ? true : false;
+                    const newGame = game.new ? true : false;
                     
-                    return {...BGGData.data.item, locale, localName, juniorGame}
+                    return {...BGGData.data.item, locale, localName, juniorGame, newGame}
                 });
                 Promise.all(fetchCalls).then(data => {
                     data.sort((a, b) => {
@@ -74,6 +75,7 @@ const GameList = () => {
                                 locale={game.locale}
                                 isExpansion={game.type === 'boardgameexpansion'}
                                 juniorGame={game.juniorGame}
+                                newGame={game.newGame}
                             />
                         )
                     })}

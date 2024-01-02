@@ -355,6 +355,10 @@ export const gameList = [
         id: 353288,
     },
     {
+        name: 'Point salad',
+        id: 274960,
+    },
+    {
         name: 'Bohnanza',
         id: 11,
     },
@@ -370,33 +374,53 @@ export const gameList = [
         name: 'Flamecraft',
         id: 336986,
         locale: 'EST',
+        new: true,
+    },
+    {
+        name: 'Micromacro crime city',
+        id: 318977,
+        localName: 'MicroMacro: Krimilinn 2',
+        locale: 'EST',
+        new: true,
     },
     {
         name: 'Century: Golem Edition',
         id: 232832,
-    },
-    {
-        name: 'Century: Golem Edition. Eastern mountains.',
-        id: 283619,
+        new: true,
     },
     {
         name: 'The Mind',
         id: 244992,
+        new: true,
+    },
+    {
+        name: 'Century: Golem Edition. Eastern mountains.',
+        id: 283619,
+        new: true,
     },
     {
         name: 'Nidavellir',
         id: 293014,
+        new: true,
     },
     {
         name: 'Arboretum',
         id: 140934,
+        new: true,
     },
     {
         name: 'Lost Cities',
         id: 50,
+        new: true,
     },
     {
         name: 'Cascadia',
         id: 295947,
+        new: true,
+    },
+    {
+        name: 'Draftosaurus',
+        id: 264055,
+        new: true,
     },
 ]

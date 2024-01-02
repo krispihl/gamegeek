@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from '../Modal';
 import Pill from '../Pill';
+import NewStamp from '../../icons/new_stamp.svg';
 import styles from './index.module.scss';
 
-const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale, isExpansion, description, juniorGame }) => {
+const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale, isExpansion, description, juniorGame, newGame }) => {
     const [modalShown, toggleModal] = useState(false);
 
     const players = minplayers === maxplayers ? `${minplayers}` : `${minplayers} - ${maxplayers}`;
@@ -34,10 +35,11 @@ const Game = ({ name, minplayers, maxplayers, mintime, maxtime, imageUrl, locale
                 </div>
                 <img className={styles.image} src={imageUrl} alt={name} />
                 <div className={styles.infoCorner}>
-                <div className={styles.infoArrow}>
-                    →
+                    <div className={styles.infoArrow}>
+                        →
+                    </div>
                 </div>
-    </div>
+                {newGame && <img className={styles.newStamp} src={NewStamp} alt='New game' />}
             </div>
             <Modal
                 description={description}
